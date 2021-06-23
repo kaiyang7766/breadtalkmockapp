@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState, useReducer,useEffect } from 'react';
 import Modal from '../Modal';
 import {reducer} from '../reducer';
 
@@ -12,22 +12,15 @@ const Beverage_T = () => {
     const [state,dispatch]=useReducer(reducer,defaultState)
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyip0yJkCcmK2L5wDr0OtzxpQz_pdon0QvDQT-uJ48GYrYfXWkRaSmGXLz6twktCvH_FQ/exec';
-    const form = document.forms['beverage_trace']
-    // form.addEventListener('submit', e => {
-    //   e.preventDefault()
-    //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    //     .then(response => console.log('Success!', response))
-    //     .catch(error => console.error('Error!', error.message))
-    // })
-
-    const handleSubmit=(e)=>{
+    
+    useEffect(()=>{
+      const form=document.forms['beverage_trace'];
+      form.addEventListener('submit', e => {
         e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-        const newItem={id:new Date().getTime().toString(),name};
-        dispatch({type:'ADD_ITEM',payload:newItem});
-    };
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))});
+    });
   const closeModal =()=>{
     dispatch({type:'CLOSE_MODAL'})
   };
@@ -38,45 +31,85 @@ const Beverage_T = () => {
       <h2>Beverage Traceability</h2>
     </div>
     <article>
-        <form name ="beverage_trace" onSubmit={handleSubmit} className='form'>
-          <div className='form-control'>
-            <label htmlFor='Exp1'>Item 1 Expiry date:</label>
+        <form name ="beverage_trace" className='form'>
+        <div className='form-control'>
+            <h6>AX Code:31401171 CL/BT Oolong B</h6>
             <input
               type='date'
-              id='Expiry_1'
-              name='Item_1_Expiry'
+              id='item1'
+              name='31401171 CL/BT Oolong B'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp2'>Item 2 Expiry date:</label>
+            <h6>AX Code:31401170 CL/BT Jasmine A</h6>
             <input
               type='date'
-              id='Expiry_2'
-              name='Item_2_Expiry'
+              id='item2'
+              name='31401170 CL/BT Jasmine A'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp3'>Item 3 Expiry date:</label>
+            <h6>AX Code:31101170 Halal Chicken Honey Baked Ham Sliced</h6>
             <input
               type='date'
-              id='Expiry_3'
-              name='Item_3_Expiry'
+              id='item3'
+              name='31101170 Halal Chicken Honey Baked Ham Sliced'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp4'>Item 4 Expiry date:</label>
+            <h6>AX Code:31301038 Cucumber Japanese</h6>
             <input
               type='date'
-              id='Expiry_4'
-              name='Item_4_Expiry'
+              id='item4'
+              name='31301038 Cucumber Japanese'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp5'>Item 5 Expiry date:</label>
+            <h6>AX Code:30304133 Non-GMO Special Quality White Hilum Soybeans Canada</h6>
             <input
               type='date'
-              id='Expiry_5'
-              name='Item_5_Expiry'
+              id='item5'
+              name='30304133 Non-GMO Special Quality White Hilum Soybeans Canada'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:31402023 Marigold Evap. Creamer</h6>
+            <input
+              type='date'
+              id='item6'
+              name='31402023 Marigold Evap. Creamer'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30403007 Pasteurised Liquid Whole Egg</h6>
+            <input
+              type='date'
+              id='item7'
+              name='30403007 Pasteurised Liquid Whole Egg'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30502191 Kewpie Mayonnaise Japanese Style</h6>
+            <input
+              type='date'
+              id='item8'
+              name='30502191 Kewpie Mayonnaise Japanese Style'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:31502016 Dark Chocolate Crispearls</h6>
+            <input
+              type='date'
+              id='item9'
+              name='31502016 Dark Chocolate Crispearls'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30404003 Paste Yolk Boiled Egg</h6>
+            <input
+              type='date'
+              id='item10'
+              name='30404003 Paste Yolk Boiled Egg'
             />
           </div>
           <button type='submit' onClick={()=>alert("Item submitted!")}>Add 添加</button>

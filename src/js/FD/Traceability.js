@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState, useReducer, useEffect } from 'react';
 import Modal from '../Modal';
 import {reducer} from '../reducer';
 
@@ -12,22 +12,15 @@ const FD_T = () => {
     const [state,dispatch]=useReducer(reducer,defaultState)
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx96dMDackH6tr_LfWUsbytbHOBQVz_rMpg9JKpgagvBEIyixYq7vNQXfN8A2p_180x1Q/exec';
-    const form = document.forms['fd_trace']
-    // form.addEventListener('submit', e => {
-    //   e.preventDefault()
-    //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    //     .then(response => console.log('Success!', response))
-    //     .catch(error => console.error('Error!', error.message))
-    // })
-
-    const handleSubmit=(e)=>{
+    
+    useEffect(()=>{
+      const form=document.forms['fd_trace'];
+      form.addEventListener('submit', e => {
         e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-        const newItem={id:new Date().getTime().toString(),name};
-        dispatch({type:'ADD_ITEM',payload:newItem});
-    };
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))});
+    });
   const closeModal =()=>{
     dispatch({type:'CLOSE_MODAL'})
   };
@@ -38,45 +31,85 @@ const FD_T = () => {
       <h2>Frozen Dough Traceability</h2>
     </div>
     <article>
-        <form name ="fd_trace" onSubmit={handleSubmit} className='form'>
-          <div className='form-control'>
-            <label htmlFor='Exp1'>Item 1 Expiry date:</label>
+        <form name ="fd_trace" className='form'>
+        <div className='form-control'>
+            <h6>AX Code:30403007 Liquid Whole Egg</h6>
             <input
               type='date'
-              id='Expiry_1'
-              name='Item_1_Expiry'
+              id='item1'
+              name='30403007 Liquid Whole Egg'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp2'>Item 2 Expiry date:</label>
+            <h6>AX Code:30103012 Palffy Margarine 790LTU</h6>
             <input
               type='date'
-              id='Expiry_2'
-              name='Item_2_Expiry'
+              id='item2'
+              name='30103012 Palffy Margarine 790LTU'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp3'>Item 3 Expiry date:</label>
+            <h6>AX Code:30103004 Chocolate Taste Sheet</h6>
             <input
               type='date'
-              id='Expiry_3'
-              name='Item_3_Expiry'
+              id='item3'
+              name='30103004 Chocolate Taste Sheet'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp4'>Item 4 Expiry date:</label>
+            <h6>AX Code:30106023 Whipping Cream (Dairy)/Millac</h6>
             <input
               type='date'
-              id='Expiry_4'
-              name='Item_4_Expiry'
+              id='item4'
+              name='30106023 Whipping Cream (Dairy)/Millac'
             />
           </div>
           <div className='form-control'>
-            <label htmlFor='Exp5'>Item 5 Expiry date:</label>
+            <h6>AX Code:30103007 Anchor Butter Sheet</h6>
             <input
               type='date'
-              id='Expiry_5'
-              name='Item_5_Expiry'
+              id='item5'
+              name='30103007 Anchor Butter Sheet'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30403006 Liquid Egg Yolk</h6>
+            <input
+              type='date'
+              id='item6'
+              name='30403006 Liquid Egg Yolk'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30103008 Margarine FN-FS-01</h6>
+            <input
+              type='date'
+              id='item7'
+              name='30103008 Margarine FN-FS-01'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30902083 Dried Fruit Raisin Black Coated in Oil</h6>
+            <input
+              type='date'
+              id='item8'
+              name='30902083 Dried Fruit Raisin Black Coated in Oil'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:30101019 Unsalted Butter "Anchor" NZ</h6>
+            <input
+              type='date'
+              id='item9'
+              name='30101019 Unsalted Butter "Anchor" NZ'
+            />
+          </div>
+          <div className='form-control'>
+            <h6>AX Code:31501020 Cocoa Chips Bakeable/Redman</h6>
+            <input
+              type='date'
+              id='item10'
+              name='31501020 Cocoa Chips Bakeable/Redman'
             />
           </div>
           <button type='submit' onClick={()=>alert("Item submitted!")}>Add 添加</button>
