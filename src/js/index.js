@@ -25,7 +25,7 @@ const ReactRouterSetup = () => {
     <Switch>
     <Route exact path="/">
     <img src={require('../assets/breadtalkmascot.png')} id='mascot'></img>
-    <h3>BreadTalk CK Online System 线上系统</h3>
+    <h3>BreadTalk CK Online SystemS 线上系统</h3>
     <p>Please select your department 请选择部门:</p>
     <Navbar/>
     </Route>
