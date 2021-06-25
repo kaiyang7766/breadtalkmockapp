@@ -20,6 +20,9 @@ export default function BeverageNavbar() {
                 <li>
                     <Link to='/beverage/chiller'>Chiller and Freezer</Link>
                 </li>
+                <li>
+                    <Link to='/beverage/OPRP'>OPRP</Link>
+                </li>
             </ul>
         </nav>
         </div>

@@ -25,6 +25,9 @@ const Navbar = () => {
       <li>
         <Link to="/SD" id='selectdepartment'>Shaped Dough</Link>
       </li>
+      <li>
+        <Link to="/TMC" id='selectdepartment'>TMC</Link>
+      </li>
     </ul>
   </>
   );

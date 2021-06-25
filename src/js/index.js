@@ -13,7 +13,18 @@ import FD_T from './FD/Traceability';
 // Toast
 import ToastNavbar from './Toast/Navbar';
 import Toast_T from './Toast/Traceability';
-// next
+// SD
+import SdNavbar from './SD/Navbar';
+import SD_T from './SD/Traceability';
+//A-Mix
+import AMNavbar from './AMix/Navbar';
+import AM_T from './AMix/Traceability';
+//TMC
+import TMCNavbar from './TMC/Navbar';
+import TMC_T from './TMC/Traceability';
+//Hot Kitchen
+import HKNavbar from './HK/Navbar';
+import HK_T from './HK/Traceability';
 import Error from './Error';
 import Person from './Person';
 // navbar
@@ -52,6 +63,30 @@ const ReactRouterSetup = () => {
     </Route>
     <Route exact path="/toast/trace">
       <Toast_T/>
+    </Route>
+    <Route exact path="/SD">
+      <SdNavbar/>
+    </Route>
+    <Route exact path="/SD/trace">
+      <SD_T/>
+    </Route>
+    <Route exact path="/AM">
+      <AMNavbar/>
+    </Route>
+    <Route exact path="/AM/trace">
+      <AM_T/>
+    </Route>
+    <Route exact path="/TMC">
+      <TMCNavbar/>
+    </Route>
+    <Route exact path="/TMC/trace">
+      <TMC_T/>
+    </Route>
+    <Route exact path="/HK">
+      <HKNavbar/>
+    </Route>
+    <Route exact path="/HK/trace">
+      <HK_T/>
     </Route>
     <Route path="/person/:id" children={<Person/>}></Route>
     <Route path="*">
