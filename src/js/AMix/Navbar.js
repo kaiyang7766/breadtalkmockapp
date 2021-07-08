@@ -12,10 +12,10 @@ export default function AMNavbar() {
                     <Link to='/AM/trace'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
-                    <Link to='/AM/cleaning'>Cleaning and sanitation</Link>
+                    <Link to='/AM/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
                 </li>
                 <li>
-                    <Link to='/AM/OPRP'>OPRP</Link>
+                    <Link to='/AM/OPRP' className="disableCursor" onClick={ (event) => event.preventDefault()}>OPRP</Link>
                 </li>
             </ul>
         </nav>
