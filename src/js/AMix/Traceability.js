@@ -11,7 +11,7 @@ const AM_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz3dsC3QKxAhhSdXnjbSCTDUtEvcqC2fXp2NUOxfbk81bREOiDqEfgFKZYx2csprnv9/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz3dsC3QKxAhhSdXnjbSCTDUtEvcqC2fXp2NUOxfbk81bREOiDqEfgFKZYx2csprnv9/exe';
 
     useEffect(()=>{
       const form=document.forms['am_trace'];
