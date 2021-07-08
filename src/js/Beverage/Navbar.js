@@ -9,19 +9,19 @@ export default function BeverageNavbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/beverage/trace'>Traceability System 追溯系统</Link>
+                    <Link to='/beverage/trace' id='selectdepartment'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
-                    <Link to='/beverage/cleaning'>Cleaning and sanitation</Link>
+                    <Link to='/beverage/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
                 </li>
                 <li>
-                    <Link to='/beverage/cooking'>Cooking</Link>
+                    <Link to='/beverage/cooking' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cooking</Link>
                 </li>
                 <li>
-                    <Link to='/beverage/chiller'>Chiller and Freezer</Link>
+                    <Link to='/beverage/chiller' className="disableCursor" onClick={ (event) => event.preventDefault()}>Chiller and Freezer</Link>
                 </li>
                 <li>
-                    <Link to='/beverage/OPRP'>OPRP</Link>
+                    <Link to='/beverage/OPRP' className="disableCursor" onClick={ (event) => event.preventDefault()}>OPRP</Link>
                 </li>
             </ul>
         </nav>
