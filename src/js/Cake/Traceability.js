@@ -11,7 +11,7 @@ const Cake_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwkAyuX-FihMiDV2UABHADegT9Ok8Qv_lp9gsKxudwo3YeGCpWq5J3Icx4gWNufIXEk/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwkAyuX-FihMiDV2UABHADegT9Ok8Qv_lp9gsKxudwo3YeGCpWq5J3Icx4gWNufIXEk/exe';
 
     useEffect(()=>{
       const form=document.forms['cake_trace'];
