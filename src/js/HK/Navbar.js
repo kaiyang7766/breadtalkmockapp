@@ -9,25 +9,25 @@ export default function HKNavbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/HK/trace'>Traceability System 追溯系统</Link>
+                    <Link to='/HK/trace' id='selectdepartment'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
-                    <Link to='/HK/cleaning'>Cleaning and sanitation</Link>
+                    <Link to='/HK/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
                 </li>
                 <li>
-                    <Link to='/HK/metal'>Metal detector</Link>
+                    <Link to='/HK/metal' className="disableCursor" onClick={ (event) => event.preventDefault()}>Metal detector</Link>
                 </li>
                 <li>
-                    <Link to='/HK/cooking'>Cooking</Link>
+                    <Link to='/HK/cooking' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cooking</Link>
                 </li>
                 <li>
-                    <Link to='/HK/cooling'>Cooling</Link>
+                    <Link to='/HK/cooling' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cooling</Link>
                 </li>
                 <li>
-                    <Link to='/HK/chiller'>Chiller and Freezer</Link>
+                    <Link to='/HK/chiller' className="disableCursor" onClick={ (event) => event.preventDefault()}>Chiller and Freezer</Link>
                 </li>
                 <li>
-                    <Link to='/HK/OPRP'>OPRP</Link>
+                    <Link to='/HK/OPRP' className="disableCursor" onClick={ (event) => event.preventDefault()}>OPRP</Link>
                 </li>
             </ul>
         </nav>
