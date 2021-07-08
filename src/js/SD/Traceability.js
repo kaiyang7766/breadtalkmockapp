@@ -11,7 +11,7 @@ const SD_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrMmfeUNPih-oQxrnecQW2Iy9kAHXbK_rowGaexmiDvdJsQIIraBPpmSRnmomiKWX9/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrMmfeUNPih-oQxrnecQW2Iy9kAHXbK_rowGaexmiDvdJsQIIraBPpmSRnmomiKWX9/exe';
 
     useEffect(()=>{
       const form=document.forms['sd_trace'];
