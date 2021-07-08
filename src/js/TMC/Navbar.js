@@ -9,19 +9,19 @@ export default function TMCNavbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/TMC/trace'>Traceability System 追溯系统</Link>
+                    <Link to='/TMC/trace' id='selectdepartment'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
-                    <Link to='/TMC/cleaning'>Cleaning and sanitation</Link>
+                    <Link to='/TMC/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
                 </li>
                 <li>
-                    <Link to='/TMC/metal'>Metal detector</Link>
+                    <Link to='/TMC/metal' className="disableCursor" onClick={ (event) => event.preventDefault()}>Metal detector</Link>
                 </li>
                 <li>
-                    <Link to='/TMC/cooking'>Cooking</Link>
+                    <Link to='/TMC/cooking' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cooking</Link>
                 </li>
                 <li>
-                    <Link to='/TMC/chiller'>Chiller and Freezer</Link>
+                    <Link to='/TMC/chiller' className="disableCursor" onClick={ (event) => event.preventDefault()}>Chiller and Freezer</Link>
                 </li>
             </ul>
         </nav>
