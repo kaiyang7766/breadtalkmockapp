@@ -11,7 +11,7 @@ const HK_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyNTgJtxBfS2AgI6ZyV1Zs6X1tzSYL6FQj93zkly57t82bWo_1vlC2FNxYqh3EiC-Oa/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyNTgJtxBfS2AgI6ZyV1Zs6X1tzSYL6FQj93zkly57t82bWo_1vlC2FNxYqh3EiC-Oa/exe';
 
     useEffect(()=>{
       const form=document.forms['hk_trace'];
