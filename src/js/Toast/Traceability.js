@@ -11,7 +11,7 @@ const Toast_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwSOpy-fi8z6oi_eEzvI5ZglBsPIJ0NJOuTRJueg9Wtiuv7OuPtc89ApryNyP0FipuY1w/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwSOpy-fi8z6oi_eEzvI5ZglBsPIJ0NJOuTRJueg9Wtiuv7OuPtc89ApryNyP0FipuY1w/exe';
 
     useEffect(()=>{
       const form=document.forms['toast_trace'];
