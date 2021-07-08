@@ -9,19 +9,19 @@ export default function FdNavbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/fd/trace'>Traceability System 追溯系统</Link>
+                    <Link to='/fd/trace' id='selectdepartment'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
-                    <Link to='/fd/cleaning'>Cleaning and sanitation</Link>
+                    <Link to='/fd/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
                 </li>
                 <li>
-                    <Link to='/fd/metal_meustronic'>Metal detector (Meustronic)</Link>
+                    <Link to='/fd/metal_meustronic' className="disableCursor" onClick={ (event) => event.preventDefault()}>Metal detector (Meustronic)</Link>
                 </li>
                 <li>
-                    <Link to='/fd/metal_toledo'>Metal detector (Mettler Toledo)</Link>
+                    <Link to='/fd/metal_toledo' className="disableCursor" onClick={ (event) => event.preventDefault()}>Metal detector (Mettler Toledo)</Link>
                 </li>
                 <li>
-                    <Link to='/fd/chiller'>Chiller and Freezer</Link>
+                    <Link to='/fd/chiller' className="disableCursor" onClick={ (event) => event.preventDefault()}>Chiller and Freezer</Link>
                 </li>
             </ul>
         </nav>
