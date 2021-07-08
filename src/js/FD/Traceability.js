@@ -11,7 +11,7 @@ const FD_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx96dMDackH6tr_LfWUsbytbHOBQVz_rMpg9JKpgagvBEIyixYq7vNQXfN8A2p_180x1Q/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx96dMDackH6tr_LfWUsbytbHOBQVz_rMpg9JKpgagvBEIyixYq7vNQXfN8A2p_180x1Q/exe';
     
     useEffect(()=>{
       const form=document.forms['fd_trace'];
