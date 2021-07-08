@@ -11,7 +11,7 @@ const TMC_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbymQL5r-LivL4W7n0LEWFMGLc0vZdTe3tyHuao-ZdbKsDXJlu2KuzVSQb7GxvgkMTedJg/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbymQL5r-LivL4W7n0LEWFMGLc0vZdTe3tyHuao-ZdbKsDXJlu2KuzVSQb7GxvgkMTedJg/exe';
 
     useEffect(()=>{
       const form=document.forms['tmc_trace'];
