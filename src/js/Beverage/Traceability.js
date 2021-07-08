@@ -11,7 +11,7 @@ const Beverage_T = () => {
     const [name,setName]=useState('');
     const [state,dispatch]=useReducer(reducer,defaultState)
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyip0yJkCcmK2L5wDr0OtzxpQz_pdon0QvDQT-uJ48GYrYfXWkRaSmGXLz6twktCvH_FQ/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyip0yJkCcmK2L5wDr0OtzxpQz_pdon0QvDQT-uJ48GYrYfXWkRaSmGXLz6twktCvH_FQ/exe';
     
     useEffect(()=>{
       const form=document.forms['beverage_trace'];
