@@ -9,25 +9,25 @@ export default function ToastNavbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/toast/trace'>Traceability System 追溯系统</Link>
+                    <Link to='/toast/trace' id='selectdepartment'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
-                    <Link to='/toast/cleaning'>Cleaning and sanitation</Link>
+                    <Link to='/toast/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
                 </li>
                 <li>
-                    <Link to='/toast/metal_sesotec'>Metal detector (Sesotec)</Link>
+                    <Link to='/toast/metal_sesotec' className="disableCursor" onClick={ (event) => event.preventDefault()}>Metal detector (Sesotec)</Link>
                 </li>
                 <li>
-                    <Link to='/toast/metal_meustronic'>Metal detector (Meustronic)</Link>
+                    <Link to='/toast/metal_meustronic' className="disableCursor" onClick={ (event) => event.preventDefault()}>Metal detector (Meustronic)</Link>
                 </li>
                 <li>
-                    <Link to='/toast/cooking_baking'>Cooking (Baking)</Link>
+                    <Link to='/toast/cooking_baking' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cooking (Baking)</Link>
                 </li>
                 <li>
-                    <Link to='/toast/cooking_frying'>Cooking (Frying)</Link>
+                    <Link to='/toast/cooking_frying' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cooking (Frying)</Link>
                 </li>
                 <li>
-                    <Link to='/toast/chiller'>Chiller and Freezer</Link>
+                    <Link to='/toast/chiller' className="disableCursor" onClick={ (event) => event.preventDefault()}>Chiller and Freezer</Link>
                 </li>
             </ul>
         </nav>
