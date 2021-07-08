@@ -9,7 +9,7 @@ export default function AMNavbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to='/AM/trace'>Traceability System 追溯系统</Link>
+                    <Link to='/AM/trace' id='selectdepartment'>Traceability System 追溯系统</Link>
                 </li>
                 <li>
                     <Link to='/AM/cleaning' className="disableCursor" onClick={ (event) => event.preventDefault()}>Cleaning and sanitation</Link>
