@@ -18,5 +18,5 @@ Traceability System:
 ![](https://raw.githubusercontent.com/kaiyang7766/breadtalkmockapp/master/src/assets/TraceabilitySystem.gif)
 >Submitting the form will fire an AJAX request to google sheet via [Google App Script](https://github.com/kaiyang7766/breadtalkmockapp/blob/master/src/Traceability.gs). All data is stored in google sheet (instead of database like Firebase) to allow everyone without knowledge of SQL to retrieve the data easily.
 
-###What's missing from this system?
+### What's missing from this system?
 There are still a lot to improve from this system, including creating an API that allows adding/removing items from the Traceability System without knowledge of React.js. Next, integrating the system with Breadtalk Zimbra Web Client would allow sufficient security to limit access to only authorized people.
